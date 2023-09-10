@@ -50,9 +50,6 @@ class _CartWidgetState extends State<CartWidget> {
         } else if (event.isKeyPressed(LogicalKeyboardKey.f4)) {
           _cartFN.requestFocus();
           return KeyEventResult.handled;
-        } else if (event.isKeyPressed(LogicalKeyboardKey.f5)) {
-          pay(state);
-          return KeyEventResult.handled;
         } else if (event.isKeyPressed(LogicalKeyboardKey.delete) && event.isControlPressed) {
           resetCart();
           return KeyEventResult.handled;
@@ -195,6 +192,7 @@ class _CartWidgetState extends State<CartWidget> {
                           SizedBox(
                             width: double.infinity,
                             child: SButton(
+                              shortCut: const [LogicalKeyboardKey.f5],
                               icon: const Icon(FontAwesomeIcons.moneyBill1),
                               label: "Bayar",
                               onPressed: () {
@@ -217,6 +215,7 @@ class _CartWidgetState extends State<CartWidget> {
                     child: SButton(
                       icon: const Icon(Icons.logout),
                       color: Colors.red,
+                      shortCut: const [LogicalKeyboardKey.f9],
                       label: "Tutup kasir",
                       onPressed: () async {
                         AppState().cashierState.loadReport();

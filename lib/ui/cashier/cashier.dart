@@ -61,6 +61,7 @@ class CashierNoSessionWidget extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 SButton(
+                  shortCut: const [LogicalKeyboardKey.f4],
                   child: const Text('Buat sesi kasir baru'),
                   onPressed: () async {
                     AppState().cashierState.resetForm();
@@ -79,6 +80,7 @@ class CashierNoSessionWidget extends StatelessWidget {
                 ),
                 const SHSpace(),
                 SButton(
+                  shortCut: const [LogicalKeyboardKey.f5],
                   positive: false,
                   child: const Text('Mulai kasir tanpa sesi'),
                   onPressed: () async {

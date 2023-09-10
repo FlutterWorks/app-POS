@@ -52,12 +52,12 @@ Future<bool?> showBaseConfirmation(
                   Expanded(
                     child: SizedBox(
                       height: STheme().buttonHeight,
-                      child: ElevatedButton(
+                      child: SButton(
                         autofocus: true,
                         onPressed: () async {
                           Navigator.pop(context, true);
                         },
-                        style: ElevatedButton.styleFrom(backgroundColor: positiveColor),
+                        //style: ElevatedButton.styleFrom(backgroundColor: positiveColor),
                         child: Text(positiveLabel ?? "Lanjutkan"),
                       ),
                     ),
